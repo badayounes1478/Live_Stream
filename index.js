@@ -1,4 +1,6 @@
 const NodeMediaServer = require('node-media-server');
+const express = require('express')
+const app = express()
 
 const config = {
   rtmp: {
@@ -9,10 +11,17 @@ const config = {
     ping_timeout: 60
   },
   http: {
-    port: process.env.PORT || 8000,
+    port:8000,
     allow_origin: '*'
   }
 };
 
+app.get('/',(req, res)=>{
+  res.send("Yahooo it's working,Party time")
+})
+
+app.listen(process.env.PORT || 4000, ()=>{
+  console.log('Listening')
+})
 var nms = new NodeMediaServer(config)
 nms.run();
