@@ -1,5 +1,6 @@
 const NodeMediaServer = require('node-media-server');
 const express = require('express')
+const cors = require('cors')
 const app = express()
 
 const config = {
@@ -15,6 +16,8 @@ const config = {
     allow_origin: '*'
   }
 };
+
+app.use(cors())
 
 app.get('/',(req, res)=>{
   res.send("Yahooo it's working,Party time")

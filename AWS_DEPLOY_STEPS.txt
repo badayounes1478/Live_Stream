@@ -1,7 +1,0 @@
-1.select ec2
-2.select instances
-3.launch instance
-4.select ubantu and launch 
-5.copy connection url
-6.open ssh terminal and hit the url where your .pem file is there
-7.hit command sudo su so you can root user check node is install or not by firing command node
