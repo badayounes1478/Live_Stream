@@ -14,6 +14,11 @@ const config = {
   http: {
     port:8000,
     allow_origin: '*'
+  },
+  https: {
+    port: 8443,
+    key:'./privatekey.pem',
+    cert:'./certificate.pem',
   }
 };
 
