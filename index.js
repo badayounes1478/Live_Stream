@@ -17,9 +17,8 @@ const config = {
   },
   https: {
     port: 8443,
-    allow_origin: '*',
-    key: './key.pem',
-    cert:'./certificate.pem',
+   key: '/etc/letsencrypt/live/cdn.nodemedia.cn/privkey.pem',
+    cert: '/etc/letsencrypt/live/cdn.nodemedia.cn/fullchain.pem',
   }
 };
 
